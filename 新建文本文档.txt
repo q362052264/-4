@@ -1,1 +1,1 @@
-pythonÖÐÕæ¼ÙÒ²ÊÇ¿ÉÒÔÓÃÕûÊý0ºÍ1À´±íÊ¾£¬ÕûÊý0±íÊ¾¼Ù£¬ÕûÊý1±íÊ¾Õæ¡£ÆäÊµÕæºÍÊÇpythonÃ¿¸ö¶ÔÏó¶¼¾ßÌåµÄÒ»ÖÖÊôÐÔ£¬ÕâÖÖÊôÐÔ²»ÊÇÕæ¾ÍÊÇ¼Ù¡£ÔÚpythonÖÐÒ»ÇÐ¶¼ÊÇ¶ÔÏó£¬ÏñÊÇÊý¾Ý½á¹¹£¬pythonÊÓ¿ÕµÄÊý¾Ý½á¹¹ÎªFalse¼Ù£¬Ïà·´²»ÊÇ¿ÕµÄÊý¾Ý½á¹¹ÔòÎªTrueÕæ¡£
+pythonä¸­çœŸå‡ä¹Ÿæ˜¯å¯ä»¥ç”¨æ•´æ•°0å’Œ1æ¥è¡¨ç¤ºï¼Œæ•´æ•°0è¡¨ç¤ºå‡ï¼Œæ•´æ•°1è¡¨ç¤ºçœŸã€‚åœ¨pythonä¸­ä¸€åˆ‡éƒ½æ˜¯å¯¹è±¡ï¼Œåƒæ˜¯æ•°æ®ç»“æž„ï¼Œpythonè§†ç©ºçš„æ•°æ®ç»“æž„ä¸ºFalseå‡ï¼Œç›¸åä¸æ˜¯ç©ºçš„æ•°æ®ç»“æž„åˆ™ä¸ºTrueçœŸã€‚
