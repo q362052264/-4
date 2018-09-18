@@ -1,0 +1,119 @@
+1.
+'hello,world'.replace('l','*')
+
+2.
+a="Good"
+b=(a+'!')*3
+b=b.replace('G','g',3)
+print(b)
+
+
+a="Good"
+b=(a.replace('G','g',1)+'!')*3
+print(b)
+
+3.
+'Fh190We92QbuC'.swapcase()
+
+4.
+a="Fh1oWe92QbvC"
+b=""
+for c in a:
+    if c.isdigit():
+	    b=b+c
+	
+print(b)
+
+
+5.
+lst = [2, 0, 3, 6, 9]
+sorted(lst)
+
+6.
+l = [2, 3, 1, 2, 4, 3]
+l1= list(set(l))
+l1.sort(key=l.index)
+print("l=",l1)
+
+7.
+string = 'aasdebbcaa'
+{ a:string.count(a) for a in set(string.replace(' ','')) }
+
+8.
+def count(str):
+    number_num = char_num = space_num = other_num = 0
+    for char in str:
+        if char.isdigit():
+            number_num += 1
+        elif char.isalpha():
+            char_num += 1
+        elif char == ' ':
+            space_num += 1
+        else:
+            other_num += 1
+    print('数字有:%d个,字母有:%d个,空格有:%d个,其他有:%d个' % (
+        number_num, char_num, space_num, other_num))
+
+str=input('请输入一串字符串:')
+请输入一串字符串:hello  safdas-461456
+count(str)
+
+9.
+import re
+def space(str):
+    if str  == ''.join(str.split()):
+        return 'no'
+    else:
+        str1=re.sub('\s','',str)
+        return str1
+
+print(space('hellowor ld'))
+
+print(space('helloworld'))
+
+
+10.
+import random 
+n = random.randint(1, 100) 
+guess = int(input("Enter an integer from 1 to 100: ")) 
+while n != "guess": 
+    if guess < n: 
+        print ("guess is low") 
+        guess = int(input("Enter an integer from 1 to 100: ")) 
+    elif guess > n: 
+        print ("guess is high") 
+        guess = int(input("Enter an integer from 1 to 100: ")) 
+    else: 
+        print ("you guessed it!" )
+        break
+
+11.
+for a in range(1,10,1):
+	for b in range(1,10,1):
+		if b==a:
+			print("%d*%d=%d" %(a,b,a*b))
+			break
+		else:
+			print("%d*%d=%d" %(a,b,a*b),end='')
+12.
+for a in range(1,101,1):
+	if a%3==0 and a%5==0:
+		print("FizzBuzz")
+	elif a%3==0:
+		print("Fizz")
+	elif a%5==0:
+		print("Buzz")
+	else:
+		print(a)
+13.
+a=1
+b=1
+d=0
+while 1:
+    c=a+b
+    if c>100:
+        break
+    print(c)
+    d=a
+    a=b
+    b=c
