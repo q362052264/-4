@@ -1,126 +1,149 @@
 1
-PythonĿǰ�ṩ�����ַ�����ֵ������
-�ַ�����'��'�����
-string.Templateģ��
+Python目前提供两种字符串插值方法：
+字符串的'％'运算符
+string.Template模块
 2.
-operator.iadd��a��b ��
-operator.__iadd__��a��b ��
-a = iadd(a, b)�൱�ڡ�a += b
+operator.iadd（a，b ）
+operator.__iadd__（a，b ）
+a = iadd(a, b)相当于。a += b
 
-operator.iand��a��b ��
-operator.__iand__��a��b ��
-a = iand(a, b)�൱�ڡ�a &= b
+operator.iand（a，b ）
+operator.__iand__（a，b ）
+a = iand(a, b)相当于。a &= b
 
-operator.iconcat��a��b ��
-operator.__iconcat__��a��b ��
-a = iconcat(a, b)��ͬ��a��b���С�a += b
+operator.iconcat（a，b ）
+operator.__iconcat__（a，b ）
+a = iconcat(a, b)等同于a和b序列。a += b
 
-operator.ifloordiv��a��b ��
-operator.__ifloordiv__��a��b ��
-a = ifloordiv(a, b)�൱�ڡ�a //= b
+operator.ifloordiv（a，b ）
+operator.__ifloordiv__（a，b ）
+a = ifloordiv(a, b)相当于。a //= b
 
-operator.ilshift��a��b ��
-operator.__ilshift__��a��b ��
-a = ilshift(a, b)�൱�ڡ�a <<= b
+operator.ilshift（a，b ）
+operator.__ilshift__（a，b ）
+a = ilshift(a, b)相当于。a <<= b
 
-operator.imod��a��b ��
-operator.__imod__��a��b ��
-a = imod(a, b)�൱�ڡ�a %= b
+operator.imod（a，b ）
+operator.__imod__（a，b ）
+a = imod(a, b)相当于。a %= b
 
-operator.imul��a��b ��
-operator.__imul__��a��b ��
-a = imul(a, b)�൱�ڡ�a *= b
+operator.imul（a，b ）
+operator.__imul__（a，b ）
+a = imul(a, b)相当于。a *= b
 
-operator.imatmul��a��b ��
-operator.__imatmul__��a��b ��
-a = imatmul(a, b)�൱�ڡ�a @= b
+operator.imatmul（a，b ）
+operator.__imatmul__（a，b ）
+a = imatmul(a, b)相当于。a @= b
 
-�汾3.5�е��¹��ܡ�
+版本3.5中的新功能。
 
-operator.ior��a��b ��
-operator.__ior__��a��b ��
-a = ior(a, b)�൱�ڡ�a |= b
+operator.ior（a，b ）
+operator.__ior__（a，b ）
+a = ior(a, b)相当于。a |= b
 
-operator.ipow��a��b ��
-operator.__ipow__��a��b ��
-a = ipow(a, b)�൱�ڡ�a **= b
+operator.ipow（a，b ）
+operator.__ipow__（a，b ）
+a = ipow(a, b)相当于。a **= b
 
-operator.irshift��a��b ��
-operator.__irshift__��a��b ��
-a = irshift(a, b)�൱�ڡ�a >>= b
+operator.irshift（a，b ）
+operator.__irshift__（a，b ）
+a = irshift(a, b)相当于。a >>= b
 
-operator.isub��a��b ��
-operator.__isub__��a��b ��
-a = isub(a, b)�൱�ڡ�a -= b
+operator.isub（a，b ）
+operator.__isub__（a，b ）
+a = isub(a, b)相当于。a -= b
 
-operator.itruediv��a��b ��
-operator.__itruediv__��a��b ��
-a = itruediv(a, b)�൱�ڡ�a /= b
+operator.itruediv（a，b ）
+operator.__itruediv__（a，b ）
+a = itruediv(a, b)相当于。a /= b
 
-operator.ixor��a��b ��
-operator.__ixor__��a��b ��
-a = ixor(a, b)�൱�ڡ�a ^= b
+operator.ixor（a，b ）
+operator.__ixor__（a，b ）
+a = ixor(a, b)相当于。a ^= b
 3.
-operator.abs��obj ��
-operator.__abs__��obj ��
-����obj�ľ���ֵ��
+operator.abs（obj ）
+operator.__abs__（obj ）
+返回obj的绝对值。
 
-operator.add��a��b ��
-operator.__add__��a��b ��
-���أ�a��b���֡�a + b
+operator.add（a，b ）
+operator.__add__（a，b ）
+返回，a和b数字。a + b
 
-operator.and_��a��b ��
-operator.__and__��a��b ��
-���ذ�λ��a��b��
+operator.and_（a，b ）
+operator.__and__（a，b ）
+返回按位和a和b。
 
-operator.floordiv��a��b ��
-operator.__floordiv__��a��b ��
-���ء�a // b
+operator.floordiv（a，b ）
+operator.__floordiv__（a，b ）
+返回。a // b
 
-operator.index��a ��
-operator.__index__��a ��
-����һ��ת��Ϊ�������൱��a.__index__()��
+operator.index（a ）
+operator.__index__（a ）
+返回一个转换为整数。相当于a.__index__()。
 
-operator.inv��obj ��
-operator.invert��obj ��
-operator.__inv__��obj ��
-operator.__invert__��obj ��
-��������obj�İ�λ��ת�����൱��~obj��
+operator.inv（obj ）
+operator.invert（obj ）
+operator.__inv__（obj ）
+operator.__invert__（obj ）
+返回数字obj的按位反转。这相当于~obj。
 
-operator.lshift��a��b ��
-operator.__lshift__��a��b ��
-����һ������b��
+operator.lshift（a，b ）
+operator.__lshift__（a，b ）
+返回一个左移b。
 
-operator.mod��a��b ��
-operator.__mod__��a��b ��
-���ء�a % b
+operator.mod（a，b ）
+operator.__mod__（a，b ）
+返回。a % b
 
-operator.mul��a��b ��
-operator.__mul__��a��b ��
-���أ�a��b���֡�a * b
+operator.mul（a，b ）
+operator.__mul__（a，b ）
+返回，a和b数字。a * b
 4.
-'format'������������������λ�ú͹ؼ��ֲ���
-��ʽ�ַ����ɻ���ַ����ݺͱ����ɡ�
-�ַ������ǴӸ�ʽ�ַ���������ַ�������ش�������ݡ���ǲ��ǴӸ�ʽ�ַ���ֱ�Ӵ��䵽������������ڶ��塰�滻�ֶΡ���
-�������ʽ��������Ӧ��������ַ����з���ʲô�������ǡ�
-�����ţ�'������'�����ڱ�ʾ�ַ����е��滻�ֶ�
+'format'，它接受任意数量的位置和关键字参数
+格式字符串由混合字符数据和标记组成。
+字符数据是从格式字符串到输出字符串不变地传输的数据。标记不是从格式字符串直接传输到输出，而是用于定义“替换字段”，
+它们向格式引擎描述应该在输出字符串中放置什么来代替标记。
+大括号（'花括号'）用于表示字符串中的替换字段
 5.
-���ֶ����ƿ��������ƻ����֡���������֣����Ǳ�������Ч�Ļ���Ϊ10������;
- ��������ƣ����Ǳ�������Ч��Python��ʶ�����������ڱ�ʶλ�ò��������������ڱ�ʶ�ؼ��ֲ�����
-�����ֶ������Ǳ���ʽ�ж�����ֶ����Ƶ����
+简单字段名称可以是名称或数字。如果是数字，它们必须是有效的基数为10的整数;
+ 如果是名称，它们必须是有效的Python标识符。数字用于标识位置参数，而名称用于标识关键字参数。
+复合字段名称是表达式中多个简单字段名称的组合
 6.
-���Ԫ����������Ԫ�صĻ��ǿ���ͨ����������Ԫ������±�����м�ֵ��
+如果元祖里有序列元素的话是可以通过此序列在元祖里的下标给序列加值的
 7.
-�������������elif�����else����ǿ�ѡ�ġ��ؼ���' elif'��'else if'����д�������ڱ������������
- if... ... elif... ... elif... ...���е����switch�� case���������е���䡣
+可以有零个或多个elif零件，else零件是可选的。关键字' elif'是'else if'的缩写，有助于避免过度缩进。
+ if... ... elif... ... elif... ...序列的替代switch或 case其它语言中的语句。
 8.
-�����෽�棬���صĶ���range()���ֵú�������һ���б�������ʵ�ϲ�����ˡ�����һ�����󣬵���������ʱ���������������е������������������ʹ�б����Ӷ���ʡ�ռ䡣
+在许多方面，返回的对象range()表现得好像它是一个列表，但事实上并非如此。它是一个对象，当您迭代它时，它返回所需序列的连续项，但它并不真正使列表，从而节省空间。
 
-����˵�����Ķ����ǿɵ����ģ�Ҳ����˵���ʺ���Ϊ�����͹����Ŀ�꣬��Щ�����͹��������ڹ�Ӧ�ľ�֮ǰ���ǿ��Դ��л����������Ŀ
-9.pass��伴Ϊʲô������
+我们说这样的对象是可迭代的，也就是说，适合作为函数和构造的目标，这些函数和构造期望在供应耗尽之前它们可以从中获得连续的项目
+9.pass语句即为什么都不做
 10.
-���Ը������Ĳ�������Ĭ��ֵ
-11.in�ؼ��֡�����������Ƿ����ĳ��ֵ��
-12.���Ը������������ùؼ��֣������ڵ���ʱ������ʱ����Ҫ�Թؼ��ָ�ֵ��
-13.����õ�ѡ����ָ������ʹ�����������Ĳ������ú�������Щ��������������һ��Ԫ���У��μ�Ԫ������У���
-�ڿɱ������Ĳ���֮ǰ�����ܻ���������������������
+可以给函数的参数设置默认值
+11.in关键字。这测试序列是否包含某个值。
+12.可以给函数参数设置关键字，这样在调用时给参数时必须要对关键字赋值。
+13.最不常用的选项是指定可以使用任意数量的参数调用函数。这些参数将被包含在一个元组中（参见元组和序列）。
+在可变数量的参数之前，可能会出现零个或多个正常参数。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+第三周读书笔记
+
+在Python 3.6之前，您有两种主要方法可以在字符串文字中嵌入Python表达式以进行格式化：％-formatting和str.format()。
+这两个方法都有局限性，参数多了可读性就变的很差，写的也费劲。但3.6后就有了f-string方法就能解决参数多的问题。
+可以多行的f-string但要用括号括起来，如果不用括号也可以在每句后面(除了最后一句)加\
+您可以在f-string表达式中使用各种类型的引号。只需确保在表达式中使用的字符串外部没有使用相同类型的引号。
+f-string内不能有\转义，也不能有#
+
+functools，用于高阶函数：指那些作用于函数或者返回其它函数的函数，通常只要是可以被当做函数调用的对象就是这个模块的目标。
