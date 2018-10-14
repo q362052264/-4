@@ -1,0 +1,41 @@
+绝对定位元素不总被父级overflow属性剪裁，尤其当overflow在绝对定位元素及其包含块之间的时候
+包含块指 “含position:relative/absolute/fixed”声明的父级元素，没有则body元素
+
+如果overflow属性所在的元素同时是定位元素或者overflow元素和绝对定位之间有定位元素，里面的定位元素会被剪裁掉
+
+绝对定位元素不能让滚动条出现，但非绝对定位元素可以，当容器滚动的时候，绝对定位元素不跟着滚动
+
+clip使用前提：元素必须是绝对定位或者固定定位
+
+clip的四个值不支持百分比
+
+由于position:fixed元素的包含块是根元素，除非根元素滚动，overflow无法剪裁
+
+
+clip的四个（left、right、top、bottom）值
+当rect()中的bottom值小于top值，或者right值小于left值时，整个剪切区域不会显示
+当top或者left取值为auto时，相当于取值为0
+当bottom和right取值为auto时，相当于元素的100%宽度
+
+当absolute遇到left、right、top、bottom属性时，absolute才会变成绝对定位元素
+如果只设置了水平方向的值，那么垂直方向定位依旧相对定位
+
+如果只有left或者right属性，则由于包裹性宽度为0；当两值同时存在时，宽度不为0，
+而表现为自适应包含块的padding-box
+
+当absolute设置了left、right、top、bottom四个值时，无论设置padding还是margin，占据空间不变，变的只是content box
+
+relative定位的两个特性：一、相对自身 二、不会影响周围元素布局
+
+relative的top和bottom这两个垂直方向的百分比值都是是相对于高度计算的
+
+如果父元素没有设定高度或者不是“格式化高度”，那么top设值等同于top：0
+
+relative只有一个方向的定位属性会生效，而方向则根据默认文档流来判断
+
+当设置position：relative时应该只设置需求上受影响的那部分，relative的层叠顺序会被提高，
+会导致层叠顺序的混乱，很可能导致z-index无法生效
+
+position:fixed只受<html>根元素限制
+
+fixed跟absolute一样当没设值left、right、top、bottom时拥有相对定位特性
