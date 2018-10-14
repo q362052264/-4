@@ -13,6 +13,24 @@ from functools import partial
 addA=partial(add,x=1,y=2,z=3)
 addA()
 
+#2.2
+def add(x,*args):
+	sum1=x
+	for i in args:
+		sum1=sum1+i
+	print(f"sum={sum1}")
+	return sum1
+
+
+def add1(x,*args):
+	z=add(x,*args)
+	return partial(add1,z)
+
+
+add1(1)(2)(3)
+add1(1,2,3)(4)
+
+
 #3.
 def timer(func):
 	def Wrapper(*args,**akg):
