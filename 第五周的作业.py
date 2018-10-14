@@ -1,10 +1,10 @@
-1.
+#1.
 from functools import partial
 def mul(x,y):
 	return x*y
 
 a=partial(mul,2)
-2.
+#2.
 
 def add(x,y,z):
     return x+y+z
@@ -13,7 +13,7 @@ from functools import partial
 addA=partial(add,x=1,y=2,z=3)
 addA()
 
-3.
+#3.
 def timer(func):
 	def Wrapper(*args,**akg):
 		start=time.time()
@@ -27,7 +27,7 @@ def timer(func):
 def add1(x,y):
 	return x+y
 
-4.
+#4.
 def timer2(func):
 	def Wrapper(*args,**akg):
 		try:
@@ -46,7 +46,7 @@ def chu(*args,**akg):
 		sum1=sum1/i
 	return sum1
 
-5.
+#5.
 def timer3(func):
 	def Wrapper(*args,**akg):
 		start=time.time()
@@ -67,7 +67,7 @@ def chu(*args,**akg):
 
 
 
-1.
+#1.
 def timer4(func):
 	def Wrapper(*args,**akg):
 		print(type(args))
@@ -92,7 +92,7 @@ def add2(x,y):
 
 add2("asdsad","ASDSADSA")
 
-2.
+#2.
 def t1(path):
 	def t2(zijie):
 		path1=path
@@ -104,7 +104,7 @@ def t1(path):
 					print(e)
 					break
 				yield t
-		print("Ω· ¯¡À!")
+		print("¬Ω√°√ä√∏√Å√ã!")
 	return t2
 
 path="C:/new1.txt"
@@ -112,7 +112,7 @@ z=t1(path)
 x=z(2)
 x.send(None)
 
-3.
+#3.
 def t3():
 	sumkey=0
 	while True:
@@ -122,12 +122,12 @@ def t3():
 x=t3()
 next(x)
 
-4.
+#4.
 x=(i for i in range(1,51,1) if not i%2)
 for i in x:
 	print(i)
 
-5.
+#5.
 import os
 from os.path import join,getsize
 def x(path):
