@@ -1,5 +1,6 @@
 import requests
 import threading
+import time
 from queue import Queue
 lock=threading.Lock()
 queue1=Queue(maxsize=10)
@@ -20,19 +21,14 @@ class Test(threading.Thread):
 		self.num=num
 	def run(self):
 		with self.num:
-			func,args=self.queue.get()
-			lock.acquire()
-			r=func(args,auth=('user','123456'))
-			global queue2
-			queue2.put(r)
-			lock.release()
-			time.sleep(1)
-			func,args=self.queue.get()
-			lock.acquire()
-			r=func(args,auth=('user','123456'))
-			queue2.put(r)
-			lock.release()
-			time.sleep(1)
+			while not queue1.empty():
+			    func,args=self.queue.get()
+			    lock.acquire()
+			    r=func(args,auth=('user','123456'))
+			    global queue2
+			    queue2.put(r)
+			    lock.release()
+			    time.sleep(1)
 
 
 for i in range(5):
