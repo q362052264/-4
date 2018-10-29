@@ -108,3 +108,46 @@ c3=threading.Thread(name='c3',target=producer,args=(cond,event))
 c3.start()
 c1.start()
 c2.start()
+
+
+
+
+
+
+
+
+
+################################################
+import time
+import multiprocessing
+from queue import PriorityQueue
+from random import randint
+from multiprocessing.dummy import Pool
+from multiprocessing import Pool
+q=PriorityQueue()
+def double(n):
+    return n*2
+def producer():
+    count=0
+    while count<10:
+        p=randint(0,100)
+        print(f"put:{p}")
+        q.put((p,double,p))
+        count+=1
+
+def consumer():
+    while 1:
+        if q.empty():
+            break
+        p1,func,p3=q.get()
+        print(f"p1={p1} p3={p3}")
+        print(f"jieguo={func(p3)}")
+        time.sleep(0.1)
+
+if __name__=="__main__":
+    t = multiprocessing.Process(target=producer)
+    t.start()
+    time.sleep(1)
+    print(f"q.empty={q.empty()}")
+    t2=multiprocessing.Process(target=consumer)
+    t2.start()
