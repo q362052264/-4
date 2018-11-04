@@ -47,7 +47,7 @@ import aiohttp
 async def produce():
     a=0
     while(a<10):
-        print(f'正在提交....a的值为{a}')
+        print(f'脮媒脭脷脤谩陆禄....a碌脛脰碌脦陋{a}')
         yield f"http://httpbin.org/get?a={a}"
         a=a+1
 
